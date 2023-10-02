@@ -1,0 +1,19 @@
+{
+  "name": "js-3d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cannon": "^0.6.2",
+    "nipplejs": "^0.10.1",
+    "three": "^0.156.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9"
+  }
+}

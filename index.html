@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Desktop View</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+
+		<canvas id="c"></canvas>
+
+		<div id="loadingScreen">
+   			<div id="loadingPercent">Loading... 0%</div>
+    		<div id="loadingBar">
+       	 		<div id="loadingProgress"></div>
+    		</div>
+    		<div id="loadingFiles">0 of 0 files Loaded</div>
+		</div>
+
+		<div id="stick1Container">
+			<img src="joystick-base.png" class="baseImage">
+			<div id="stick1">
+				<img src="joystick-red1.png" class="stickImage">
+			</div>
+		</div>
+		
+		<div id="stick2Container">
+			<img src="joystick-base.png" class="baseImage">
+			<div id="stick2">
+				<img src="joystick-red1.png" class="stickImage">
+			</div>
+		</div>
+		
+		<div id="overlay">
+			<button id="fullscreen" class="d1Button">Turn on Fullscreen mode</button>
+		</div>
+
+
+		
+        
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>
