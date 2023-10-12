@@ -15,7 +15,7 @@ import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 
 
-//loading screen manager
+
 
 const loadingScreen = document.getElementById("loadingScreen");
 const loadingProgress = document.getElementById("loadingProgress");
@@ -33,7 +33,7 @@ manager.onError = url => console.log(`Error loading: ${url}`);
 
 
 
-//constants
+
 const lightIntensity = 40;
 const roomScale = 1;
 
@@ -52,12 +52,11 @@ const cubeTextureLoader = new THREE.CubeTextureLoader
 
 
 
-//canvas initialization...
 
 const canvas = document.querySelector('#c');
 
 
-//scene initalization...
+
 const scene = new THREE.Scene();
 
 const environmentMap = cubeTextureLoader.load([
@@ -79,28 +78,28 @@ const sizes = {
 
 window.addEventListener('resize', () =>
 {
-    // Update sizes
+   
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
 
-    // Update camera
+  
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
 
-    // Update renderer
+  
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math .min(window.devicePixelRatio, 2))
 })
 
  
-// camera initializations
+
 
 const camera = new THREE.PerspectiveCamera (80, window.innerWidth/ window.innerHeight , 0.1, 5000);
 camera.position.set(4 ,1.2, +2   )
   
 scene.add(camera) 
  
-// Cursor Initialzation
+
 const cursorGeometry = new THREE.RingGeometry(0.005, 0.001, 20);
 const cursorMaterial = new THREE.MeshPhongMaterial({color: 0x000000, side: THREE.DoubleSide});
 const cursor = new THREE.Mesh(cursorGeometry, cursorMaterial);
@@ -110,13 +109,13 @@ cursor.position.set(0, 0, -0.5);
 
 
 
-//light initilization
+
 const light1 = new THREE.AmbientLight( 0x404040, lightIntensity );
-//light1.layers.set(1)
+
 scene.add(light1);
 
 
-//controls
+
 const controls = new PointerLockControls(camera, canvas);
 scene.add(controls.getObject());
 
@@ -252,7 +251,7 @@ function getSideVector() {
 function update(deltaTime) {
     const speed = 0.1;
     camera.rotation.y -= joystick2.value.x / 50
-   // camera.rotation.x -= joystick2.value.y / 50
+   
     getForwardVector();
 
     if (joystick1.value.y != 0) {
@@ -292,22 +291,14 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.style.display = 'none';
     });
 });
-//#endregion
 
-//#region UI setup
-
-
-// layers 
-
-
-//import dracoModel
 
 gltfLoader.load( 'maiafinal1.glb', function ( gltf ) {
 
 
   const root = gltf.scene;
   root.traverse((object) => {
-   // object.layers.set(1);
+  
 });
    scene.add( root );
   root.position.set(0 , 0 , 0);
@@ -337,7 +328,7 @@ gltfLoader.load( 'maiafinal1.glb', function ( gltf ) {
  
  
 
-// Movement Controls Initialization
+
 
 
 
@@ -374,7 +365,7 @@ function animate() {
 animate();
 
 
-// Control Event Listeners
+
 const onKeyDown = function ( event ) {
 
   switch ( event.code ) {
