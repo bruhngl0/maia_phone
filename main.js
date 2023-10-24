@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-gltfLoader.load( 'maiafinal1.glb', function ( gltf ) {
+gltfLoader.load( 'maiafinal2k.glb', function ( gltf ) {
 
 
   const root = gltf.scene;
