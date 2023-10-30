@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-gltfLoader.load( 'maiafinal2k.glb', function ( gltf ) {
+gltfLoader.load( 'bake.glb', function ( gltf ) {
 
 
   const root = gltf.scene;
@@ -433,6 +433,7 @@ window.addEventListener('click', () => {
         deviceControls.connect();
     }
 });
+
 
 
 
