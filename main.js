@@ -249,7 +249,7 @@ function getSideVector() {
 }
 
 function update(deltaTime) {
-    const speed = 0.1;
+    const speed = 0.3;
     camera.rotation.y -= joystick2.value.x / 50
    
     getForwardVector();
