@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-gltfLoader.load( 'Bakevr16.glb', function ( gltf ) {
+gltfLoader.load( 'Android15.glb', function ( gltf ) {
 
 
   const root = gltf.scene;
