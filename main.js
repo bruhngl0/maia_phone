@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-gltfLoader.load( 'bake.glb', function ( gltf ) {
+gltfLoader.load( 'Bakevr16.glb', function ( gltf ) {
 
 
   const root = gltf.scene;
