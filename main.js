@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-gltfLoader.load( 'Android17.glb', function ( gltf ) {
+gltfLoader.load( 'and.glb', function ( gltf ) {
 
 
   const root = gltf.scene;
